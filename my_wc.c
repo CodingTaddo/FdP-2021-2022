@@ -1,5 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
+
+//TODO Se la parola ha solo spazi non va contata come parola
+
 int main()
 {
     int righe, parole, caratteri;
