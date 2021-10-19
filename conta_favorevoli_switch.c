@@ -41,7 +41,7 @@ int main()
                 break;
             
             default:
-                printf("Voto non valido");
+                printf("Voto non valido\n");
                 break;
 
         }
