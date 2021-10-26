@@ -11,6 +11,8 @@ int main()
 
     printf("Inserire n: ");
     scanf("%d", &n);
+
+    return EXIT_SUCCESS;
     
 }' > "default.c";
 
