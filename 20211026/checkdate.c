@@ -91,7 +91,7 @@ int giorni_per_mese(int m, int a)
 
 int is_bisestile(int a)
 {
-    if ((a % 4 == 0) || (a % 400 == 0))
+    if (((a % 4 == 0) && (a % 100 != 0)) || (a % 400 == 0))
     {
         return VERO;
     }
