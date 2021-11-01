@@ -17,17 +17,17 @@ int main()
     int dimensione;
 
 
-    printf("Inserire la sequenza di codici: \n");
+    //printf("Inserire la sequenza di codici: \n");
 
     while ((tipo_figura = getchar()) != '\n')
     {
 
-        scanf("%d", &dimensione);
+        dimensione = getchar() - '0';
 
         if (dimensione_e_corretta(dimensione) == VERO)
         {
-            printf("\n");
             stampa_figura(tipo_figura, dimensione);
+            printf("\n");
         }
         else
         {
@@ -36,8 +36,6 @@ int main()
         }
 
     }
-
-    printf("\n");
 
     return EXIT_SUCCESS;
     

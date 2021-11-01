@@ -5,35 +5,28 @@
 #define DENSITA_ACQUA 1.028
 #define ACCELERAZIONE_GRAVITA 9.81
 
-double converti_in_decimetri(double l);
 double volume_sfera(double raggio);
 double spinta_di_archimede(double volume);
 
 int main()
 {
-    double raggio, raggio_convertito, volume_s, spinta;
+    double raggio, volume_s, spinta;
 
-    printf("Inserire raggio (in centimetri): ");
+    //printf("Inserire raggio (in metri): ");
     scanf("%lf", &raggio);
 
-    raggio_convertito = converti_in_decimetri(raggio);
-    volume_s = volume_sfera(raggio_convertito);
+    volume_s = volume_sfera(raggio);
     spinta = spinta_di_archimede(volume_s);
 
-    printf("La spinta di Archimede ricevuta da una sfera di raggio %lfcm se immersa completamente in acqua è pari a %lfN\n", raggio, spinta);
+    printf("%.1lf\n", spinta);
 
     return EXIT_SUCCESS;
     
 }
 
-double converti_in_decimetri(double l)
-{
-    return l/10;
-}
-
 double volume_sfera(double raggio)
 {
-    return 4 * PI_GRECO * (raggio*raggio*raggio);
+    return (4 * PI_GRECO * (raggio*raggio*raggio))/3;
 }
 
 double spinta_di_archimede(double volume)

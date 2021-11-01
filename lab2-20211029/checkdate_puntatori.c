@@ -1,5 +1,44 @@
-#include <stdlib.h>
 #include <stdio.h>
+#include <stdlib.h>
+
+#define VERO 1
+#define FALSO 0
+
+void leggi_data_con_controllo(int *p_giorno, int *p_mese, int *p_annno);
+int checkdate(int g, int m, int a);
+int giorni_per_mese(int m, int a);
+int is_bisestile(int a);
+
+int main()
+{
+    int giorno, mese, anno;
+
+    leggi_data_con_controllo(&giorno, &mese, &anno);
+
+    printf("Data letta: %d %d %d\n", giorno, mese, anno);
+
+    return EXIT_SUCCESS;
+}
+
+void leggi_data_con_controllo(int *p_giorno, int *p_mese, int *p_anno)
+{
+    int giorno, mese, anno;
+
+    printf("Inserire giorno mese anno: ");
+    scanf("%d %d %d", &giorno, &mese, &anno);
+
+    while (!(checkdate(giorno, mese, anno)))
+    {
+        printf("Inserire giorno mese anno: ");
+        scanf("%d %d %d", &giorno, &mese, &anno);
+    }
+
+    *p_giorno = giorno;
+    *p_mese = mese;
+    *p_anno = anno;
+
+    return;
+}
 
 int checkdate(int g, int m, int a)
 {
@@ -73,3 +112,4 @@ int is_bisestile(int a)
         return FALSO;
     }
 }
+
