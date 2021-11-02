@@ -18,7 +18,7 @@ int main()
     volume_s = volume_sfera(raggio);
     spinta = spinta_di_archimede(volume_s);
 
-    printf("%.1lf\n", spinta);
+    printf("%lf\n", spinta);
 
     return EXIT_SUCCESS;
     

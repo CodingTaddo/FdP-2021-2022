@@ -6,14 +6,14 @@ double mysqrt (double r);
  
 int main()
 {
-   float r1, r2;
+   double r1, r2;
  
    r1 = sqrt (2.0);
    r2 = mysqrt (2.0);
  
    if (r1 == r2)
    {
-      printf ("OK! Radice di due = %.40lf\n", (double) r1);
+      printf ("OK! Radice di due = %.40lf\n", r1);
    }
    else
    {
@@ -35,5 +35,5 @@ double mysqrt (double r)
       n1 = (n1 + n2) / 2;
       n2 = r / n1;
    }
-   return n1;
+   return n2;
 }
