@@ -110,8 +110,3 @@ void scambia_date(int *g1Ptr, int *m1Ptr, int *a1Ptr, int *g2Ptr, int *m2Ptr, in
     /* scambia anni */
     swap (a1Ptr, a2Ptr);
 }
-
-void giorno_successivo(int *p_giorno, int *p_mese, int *p_anno)
-{
-    
-}

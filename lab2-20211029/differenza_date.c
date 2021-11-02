@@ -62,9 +62,44 @@ int differenza_date(int g1, int g2, int m1, int m2, int a1, int a2)
 int confronta_date(int g1, int g2, int m1, int m2, int a1, int a2)
 {
     /* 
-    -1: la prima è minore della seconda
+    -1: la prima è maggiore della seconda
     0: uguali
     1: la seconda è maggiore della prima
      */
+
+    if (a1 > a2)
+    {
+        return -1; 
+    }
+    else if (a1 == a2)
+    {
+        if (m1 > m2)
+        {
+            return -1;
+        }
+        else if (m1 == m2)
+        {
+            if (g1 > g2)
+            {
+                return -1;
+            }
+            else if (g1 == g2)
+            {
+                return 0;
+            }
+            else
+            {
+                return 1;
+            }
+        }
+        else
+        {
+            return 1;
+        }
+    }
+    else
+    {
+        return 1;
+    }
 
 }
