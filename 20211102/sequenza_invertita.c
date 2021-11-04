@@ -52,13 +52,15 @@ void inverti_vettore(int v[], int dimensione)
 
     contatore = 0;
 
+    //INSERISCE ALL'INTERNO DI UN VETTORE AUSILIARIO I DATI DI v INVERTITI
     while (contatore < dimensione)
     {
-        v_copia[contatore] = v[dimensione-contatore];
+        v_copia[contatore] = v[dimensione-1-contatore];
         contatore++;
     }
 
-    for (int i = 0; i<dimensione; i++)
+    //ASSEGNA AL GENERICO ELEMENTO v[i] DEL VETTORE v L'ELEMENTO v_copia[i]
+    for (int i = 0; i < dimensione; i++)
     {
         v[i] = v_copia[i];
     }
