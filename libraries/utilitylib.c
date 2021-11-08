@@ -3,7 +3,6 @@
 
 void swap (int *aPtr, int *bPtr)
 {
-
     int t;
 
     t = *aPtr;
