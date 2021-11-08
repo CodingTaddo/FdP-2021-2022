@@ -60,3 +60,63 @@ void inizializza_vettore(int v[], int dimensione, int valore)
         
     return;
 }
+
+int massimo_vettore(int v[], int dimensione)
+{
+    int massimo;
+    massimo = v[0];
+
+    for (int i = 0; i < dimensione; i++)
+    {
+        if (v[i] > massimo)
+        {
+            massimo = v[i];
+        }
+    }
+
+    return massimo;
+        
+}
+
+void stampa_istogramma_verticale(int v[], int dimensione)
+{
+
+    int massimo = massimo_vettore(v, dimensione);
+
+    printf("\n");
+
+    for (int i = massimo; i > 0; i--)
+    {
+        for (int j = 0; j < dimensione; j++)
+        {
+
+            //STAMPA * SE LA COLONNA DI ASTERISCHI PER v[j] ARRIVA FINO A i, altrimenti spazio vuoto
+            if (v[j] >= i)
+            {
+                printf("* ");
+                //printf("\u2588 "); STAMPA I BLOCCHI INTERI
+            }
+            else
+            {
+                printf("  ");
+            }
+
+        }
+        printf("\n");
+    }
+
+    for (int i = 0; i < dimensione; i++)
+    {
+        printf("--");
+    }
+
+    printf("\n");
+
+    for (int i = 0; i < dimensione; i++)
+    {
+        printf("%d ", i);
+    }
+
+    printf("\n");
+
+}
