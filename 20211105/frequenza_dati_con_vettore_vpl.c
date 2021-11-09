@@ -86,7 +86,8 @@ void calcola_frequenze(int vettore_valori[], int vettore_contatori[], int dimens
 
     while (contatore < dimensione)
     {
-        vettore_contatori[vettore_valori[contatore]]++;
+        if (vettore_valori[contatore] >= MIN_VAL || vettore_valori[contatore] <= MAX_VAL)
+            vettore_contatori[vettore_valori[contatore]]++;
         contatore++;
     }
 
