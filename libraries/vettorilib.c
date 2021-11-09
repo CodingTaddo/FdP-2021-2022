@@ -112,11 +112,11 @@ void stampa_istogramma_verticale(int v[], int dimensione)
 
     printf("\n");
 
-    for (int i = 0; i < dimensione; i++)
+    /* for (int i = 0; i < dimensione; i++)
     {
         printf("%d ", i);
     }
 
-    printf("\n");
+    printf("\n"); */
 
 }

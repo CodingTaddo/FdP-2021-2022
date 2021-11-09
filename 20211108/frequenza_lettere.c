@@ -13,7 +13,9 @@ int main()
     int indice_contatore;
     int vettore_contatori[NCONTATORI];
 
-    while ((ch = getcher()) != EOF)
+    inizializza_vettore(vettore_contatori, NCONTATORI, 0);
+
+    while ((ch = getchar()) != EOF)
     {
         if ((ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z'))
         {
@@ -23,10 +25,12 @@ int main()
         }
     }
 
+    stampa_istogramma_verticale(vettore_contatori, NCONTATORI);
+
     //STAMPA ETICHETTE
-    for (char ch_etichetta = 'a'; ch_etichetta <= 'z', ch_etichetta++)
+    for (char ch_etichetta = 'a'; ch_etichetta <= 'z'; ch_etichetta++)
     {
-        printf("%c", ch_etichetta);
+        printf("%c ", ch_etichetta);
     }
 
     printf("\n");
@@ -43,47 +47,4 @@ char my_to_lower(char ch)
     }
 
     return ch;
-}
-
-void stampa_istogramma_verticale(int v[], int dimensione)
-{
-
-    int massimo = massimo_vettore(v, dimensione);
-
-    printf("\n");
-
-    for (int i = massimo; i > 0; i--)
-    {
-        for (int j = 0; j < dimensione; j++)
-        {
-
-            //STAMPA * SE LA COLONNA DI ASTERISCHI PER v[j] ARRIVA FINO A i, altrimenti spazio vuoto
-            if (v[j] >= i)
-            {
-                printf("* ");
-                //printf("\u2588 "); STAMPA I BLOCCHI INTERI
-            }
-            else
-            {
-                printf("  ");
-            }
-
-        }
-        printf("\n");
-    }
-
-    for (int i = 0; i < dimensione; i++)
-    {
-        printf("--");
-    }
-
-    printf("\n");
-
-    for (int i = 0; i < dimensione; i++)
-    {
-        printf("%d ", i);
-    }
-
-    printf("\n");
-
 }

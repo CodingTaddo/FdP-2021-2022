@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+#include "utilitylib.h"
+
 int leggi_vettore(int v[], int dimensione);
 void inverti_vettore(int v[], int dimensione);
 void stampa_vettore(int v[], int dimensione_effettiva);
