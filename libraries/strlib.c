@@ -16,6 +16,29 @@ void my_gets(char str[])
     return;
 }
 
+void my_fgets(char str[], int l)
+{
+    int i;
+    char c;
+
+    i = 0;
+
+    while ((c = getchar()) != '\n')
+    {
+        if (i < l)
+            str[i] = c;
+        i++;
+    }
+
+    if (i > l)
+        printf("Warning: may read less character than desired. Consider extending maximum amount of readable characters.\n");
+        exit(1);
+
+    str[i] = '\0';
+
+    return;
+}
+
 int my_strlen(char str[])
 {
     int i;
