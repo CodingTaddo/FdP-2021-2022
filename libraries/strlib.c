@@ -84,6 +84,18 @@ int strcompare(char a[], char b[])
     return 0;
 }
 
+void strcopy(char t[], char s[])
+{
+    int i = 0;
+    while (i < my_strlen(s))
+    {
+        t[i] = s[i];
+        i++;
+    }
+
+    return;
+}
+
 int is_str_palindrome(char str[])
 {
     int i,j;

@@ -5,6 +5,6 @@ void my_gets(char str[]);
 void my_fgets(char str[], int l);
 
 int my_strlen(char str[]);
-void strcopy(char t[]);
+void strcopy(char t[], char s[]);
 void strcatenate(char t[], char s[]);
 int is_str_palindrome(char str[]);
