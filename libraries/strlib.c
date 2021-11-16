@@ -32,7 +32,6 @@ void my_fgets(char str[], int l)
 
     if (i > l)
         printf("Warning: may read less character than desired. Consider extending maximum amount of readable characters.\n");
-        exit(1);
 
     str[i] = '\0';
 
@@ -83,4 +82,22 @@ int strcompare(char a[], char b[])
      */
     
     return 0;
+}
+
+int is_str_palindrome(char str[])
+{
+    int i,j;
+    i = 0;
+    j = my_strlen(str)-1;
+
+    while (i <= j)
+    {
+        if (str[i] != str[j])
+            return 0;
+
+        i++;
+        j--;
+    }
+
+    return 1;
 }

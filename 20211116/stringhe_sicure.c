@@ -8,11 +8,11 @@
 
 int main()
 {
-    char s[MAX_S], t[MAX_T];
+    char s[MAX_S];
 
-    my_fgets(s, 10);
+    my_fgets(s, MAX_S);
 
-    printf("%s\n", s);
+    printf("%d\n", is__str_palindrome(s));
 
     return EXIT_SUCCESS;
     
